@@ -9,11 +9,12 @@ def up_low(s):
     ups = 0
     lows = 0
     for letter in s:
-        if letter not in '., ?!':
-            if letter.islower():
-                lows +=1
-            else:
-                ups +=1
+        if letter.islower():
+            lows +=1
+        elif letter.isupper():
+            ups +=1
+        else:
+            continue
     print(f'Original String: {s}')
     print(f'No. of Upper case characters : {ups}')
     print(f'No. of Lower case characters : {lows}')
